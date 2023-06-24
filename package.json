@@ -1,0 +1,12 @@
+{
+  "name": "goosechase",
+  "version": "0.1.0",
+  "description": "The take-home assignment for full-stack engineers applying to Goosechase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Lucas Mbiwe",
+  "license": "ISC"
+}
