@@ -1,0 +1,43 @@
+version: "3"
+services:
+  goosechase:
+    container_name: goosechase
+    build: ./
+    # depends_on:
+    #   - postgres
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/goosechase-dev
+      NODE_ENV: development
+      PORT: 3000
+    ports:
+      - "3000:3000"
+#   postgres:
+#     container_name: postgres
+#     image: postgres:14.8
+#     ports:
+#       - "5432:5432"
+#     volumes: 
+#       - ./postgresdata:/var/lib/postgresql/data
+#       - ./src/migrations/dbinit.sql:/docker-entrypoint-initdb.d/dbinit.sql
+#     restart: always
+#     environment:
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: postgres
+#       POSTGRES_DB: goosechase-dev
+#   pgadmin:
+#     container_name: pgadmin
+#     image: dpage/pgadmin4:7.3
+#     restart: always
+#     environment:
+#       PGADMIN_DEFAULT_EMAIL: admin@goosechase.com
+#       PGADMIN_DEFAULT_PASSWORD: tendTheFlock
+#       PGADMIN_LISTEN_PORT: 80
+#     ports:
+#       - "8080:80"
+#     volumes:
+#       - pgadmin-data:/var/lib/pgadmin
+#     depends_on:
+#       - postgres
+# volumes:
+#     db-data:
+#     pgadmin-data:
