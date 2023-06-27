@@ -1,0 +1,43 @@
+{
+    "a7efbc81-9ca0-441e-8a6d-ff102a6cd457": {
+        "id": "a7efbc81-9ca0-441e-8a6d-ff102a6cd457",
+        "name": "Barrels on Board",
+        "description": "The Mayflower was one of the largest ships of her time. It could carry about 180 large barrels on board. If The pilgrims put the barrels in 15 rows, how many barrels would have been in each row?",
+        "points": 100,
+        "category": "text",
+        "game_id": "828131e4-39b2-4a26-81de-3b21343adbb1"
+    },
+    "8369ee88-169b-421e-a435-715164f5256b": {
+        "id": "8369ee88-169b-421e-a435-715164f5256b",
+        "name": "If you Sailed on the Mayflower",
+        "description": "Use the book \"...If You Sailed on the Mayflower in 1620\" or \"Don't Know Much About the Pilgrims\" and find one fact that your group didn't know and finds interesting. Make a short video explaining the fun fact.",
+        "points": 500,
+        "category": "photo+video",
+        "game_id": "828131e4-39b2-4a26-81de-3b21343adbb1"
+    },
+    "068a8623-8391-42c0-9e9d-7091979df751": {
+        "id": "068a8623-8391-42c0-9e9d-7091979df751",
+        "name": "Groovy Potatoes",
+        "description": "What good is Groovy Gravy without mashed potatoes? It takes 23 potatoes to make a batch of Grandma’s Groovy Mashed Potatoes. If there is a shipment of 3,569 potatoes, how many batches of potatoes can be made?",
+        "points": 200,
+        "category": "text",
+        "game_id": "828131e4-39b2-4a26-81de-3b21343adbb1"
+    },
+    "1f5feb7a-060e-4a31-b06a-8f05244732d8": {
+        "id": "98faa7b1-0129-4e4f-85ba-ff087558c394",
+        "name": "The tallest tower",
+        "description": "This building stands above all others downtown and gives a view for miles on its observation deck. You’ll need to get within 100m of this tower to complete this mission.",
+        ,
+        "points": 200,
+        "category": "gps",
+        "game_id": "1f5feb7a-060e-4a31-b06a-8f05244732d8"
+    },
+    "1f5feb7a-060e-4a31-b06a-8f05244732d8": {
+        "id": "af631732-7700-4ee5-9718-eab2e034ee27",
+        "name": "Trash Pandas",
+        "description": "Raccoons are some of the city’s feistiest residents! Snap a picture of an elusive trash panda to secure these points.",
+        "points": 1000,
+        "category": "photo+video",
+        "game_id": "1f5feb7a-060e-4a31-b06a-8f05244732d8"
+    }
+}

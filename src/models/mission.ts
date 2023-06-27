@@ -5,8 +5,9 @@ export interface BaseMission {
     description: string;
     points: number;
     category: MissionCategory;
+    game_id: string;
 }
 
-export interface Mission {
+export interface Mission extends BaseMission {
     id: string;
 }
