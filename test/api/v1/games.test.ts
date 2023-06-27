@@ -27,7 +27,6 @@ describe('POST /api/v1/games', () => {
     const newGame: BaseGame = {
         name: '5th Grade Math Fun!',
         description: 'Let\'s have some fun by going on a hunt! Solve these math problems and earn points along the way!',
-        missions: [],
     };
 
     it('Creates a new game and returns it', async () => {
@@ -177,6 +176,7 @@ describe('POST /api/v1/games/:gid/missions', () => {
     beforeEach(async () => {
         const gameRepo = new GameRepository();
         await gameRepo.setUp();
+        await gameRepo.seed();
     });
 
     afterEach(async () => {
@@ -186,15 +186,14 @@ describe('POST /api/v1/games/:gid/missions', () => {
 
     const gid = '1f5feb7a-060e-4a31-b06a-8f05244732d8';
     const newMission = {
-        
-        name: 'Trash Pandas',
-        description: 'Raccoons are some of the city\'s feistiest residents! Snap a picture of an elusive trash panda to secure these points.',
-        points: 1000,
+        name: 'New Mission',
+        description: 'New description',
+        points: 555,
         category: 'photo+video',
         game_id: gid,
     };
 
-    it('Returns the mission with the given ID', async () => {
+    it('Creates a new mission under the given game and returns it', async () => {
         const res = await chai.request(server)
             .post(`/api/v1/games/${gid}/missions`)
             .set('Content-Type', 'application/json')

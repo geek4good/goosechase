@@ -6,12 +6,12 @@ services:
     depends_on:
       - postgres
     environment:
-      DATABASE_HOST: postgres,
-      DATABASE_PORT: 5432
-      DATABASE_NAME: goosechase-dev
-      DATABASE_USER: postgres
-      DATABASE_PASS: postgres
       NODE_ENV: development
+      PGDATABASE: goosechase-dev
+      PGHOST: localhost
+      PGPASSWORD: postgres
+      PGPORT: 5432
+      PGUSERNAME: postgres
       PORT: 3000
     ports:
       - "3000:3000"

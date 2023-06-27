@@ -5,43 +5,28 @@ import { GameRepository } from '../repositories/game_repository';
 
 const gameRepo = new GameRepository();
 
-const initializeGame = (newGame: BaseGame): Game => {
-    const id = uuid();
-    const game: Game = {
-        id,
-        ...newGame,
-    };
+const initializeMission = (newMission: BaseMission): void => {
+    // const id = uuid();
+    // const mission: Mission = {
+    //     id,
+    //     ...newMission,
+    // };
 
-    return game;
-}
-
-const initializeMission = (newMission: BaseMission): Mission => {
-    const id = uuid();
-    const mission: Mission = {
-        id,
-        ...newMission,
-    };
-
-    return mission;
-}
-
-const storeGame = async (game: Game): Promise<void> => {
-    await gameRepo.store(game);
+    // return mission;
 }
 
 const storeMission = async (mission: Mission): Promise<void> => {
-    await gameRepo.storeMission(mission);
+    // await gameRepo.storeMission(mission);
 }
 
 export const createGame = async (newGame: BaseGame): Promise<Game> => {
-    const game = initializeGame(newGame);
-    await storeGame(game);
+    const game = await gameRepo.createGame(newGame);
 
     return game;
 };
 
 export const listGames = async (): Promise<Game[]> => {
-    const games: Game[] = await gameRepo.all();
+    const games: Game[] = await gameRepo.findGames();
 
     return games;
 }
@@ -65,8 +50,7 @@ export const getMission = async (gid: string, mid: string): Promise<Mission> => 
 }
 
 export const createMission = async (newMission: BaseMission): Promise<Mission> => {
-    const mission = initializeMission(newMission);
-    await storeMission(mission);
+    const mission = await gameRepo.createMission(newMission);
 
     return mission;
 };

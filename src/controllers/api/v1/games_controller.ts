@@ -14,8 +14,12 @@ export const createGame = async (req: Request, res: Response) => {
             message: 'New game created'
         });
     } catch(e) {
-        console.log(`Error: ${(e as Error).message}`);
-        res.status(500).send((e as Error).message);
+        const { name, message } = (e as Error);
+        res.status(500).json({
+            game: null,
+            error: name,
+            message
+        });
     }
 };
 
@@ -28,7 +32,12 @@ export const listGames = async (req: Request, res: Response) => {
             message: 'All games retrieved'
         });
     } catch(e) {
-        res.status(500).send((e as Error).message);
+        const { name, message } = (e as Error);
+        res.status(500).json({
+            game: null,
+            error: name,
+            message
+        });
     }
 }
 
@@ -41,7 +50,12 @@ export const showGame = async (req: Request, res: Response) => {
             message: 'Game details retrieved'
         });
     } catch(e) {
-        res.status(500).send((e as Error).message);
+        const { name, message } = (e as Error);
+        res.status(500).json({
+            game: null,
+            error: name,
+            message
+        });
     }
 }
 
@@ -54,7 +68,12 @@ export const listMissions = async (req: Request, res: Response) => {
             message: 'All missions for game retrieved'
         });
     } catch(e) {
-        res.status(500).send((e as Error).message);
+        const { name, message } = (e as Error);
+        res.status(500).json({
+            game: null,
+            error: name,
+            message
+        });
     }
 }
 
@@ -67,7 +86,12 @@ export const getMission = async (req: Request, res: Response) => {
             message: 'Mission details retrieved'
         });
     } catch(e) {
-        res.status(500).send((e as Error).message);
+        const { name, message } = (e as Error);
+        res.status(500).json({
+            game: null,
+            error: name,
+            message
+        });
     }
 }
 
@@ -81,7 +105,11 @@ export const createMission = async (req: Request, res: Response) => {
             message: 'New mission created'
         });
     } catch(e) {
-        console.log(`ERROR: ${(e as Error).message}`);
-        res.status(500).send((e as Error).message);
+        const { name, message } = (e as Error);
+        res.status(500).json({
+            game: null,
+            error: name,
+            message
+        });
     }
 };
